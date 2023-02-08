@@ -12,7 +12,7 @@ class PetListViewModel: ObservableObject {
     func load() async {
         do {
             let screenModel = try await service.load(Constants.ScreenResources.petListing)
-            components = try screenModel.buildComponents()
+            self.components = try screenModel.buildComponents()
         } catch {
             print(error)
         }

@@ -35,7 +35,7 @@ const pets = [
       'https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1392&q=80',
     description:
       'All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. ',
-    rating: 5,
+    rating: 2,
   },
 ];
 
@@ -62,6 +62,12 @@ app.get('/pet-detail/:petId', (req, res) => {
           text: pet.description,
         },
       },
+      {
+        type: 'ratingRow',
+        data: {
+          rating: pet.rating,
+        },
+      },
     ],
   };
 
@@ -71,7 +77,7 @@ app.get('/pet-detail/:petId', (req, res) => {
 // /pet-listing
 app.get('/pet-listing', (req, res) => {
   const model = {
-    pageTitle: 'Pets',
+    pageTitle: 'Welcome to Pets',
     components: [
       {
         type: 'featuredImage',
@@ -96,10 +102,13 @@ app.get('/pet-listing', (req, res) => {
         },
       },
       {
-        type: 'featuredImage',
+        type: 'list',
         data: {
-          imageUrl:
-            'https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1392&q=80',
+          rows: pets,
+          action: {
+            type: 'push',
+            destination: 'petDetail',
+          },
         },
       },
     ],
@@ -108,6 +117,6 @@ app.get('/pet-listing', (req, res) => {
   res.json(model);
 });
 
-app.listen(3333, () => {
+app.listen(8080, () => {
   console.log('Server is running...');
 });

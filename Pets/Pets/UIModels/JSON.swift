@@ -1,5 +1,6 @@
 import Foundation
 
+
 enum DecodingError: Error {
     case dataCorruptedError
 }
@@ -9,12 +10,11 @@ struct JSON: Decodable {
     
     private struct CodingKeys: CodingKey {
         var stringValue: String
-        var intValue: Int?
-        
         init?(stringValue: String) {
             self.stringValue = stringValue
         }
         
+        var intValue: Int?
         init?(intValue: Int) {
             self.stringValue = "\(intValue)"
             self.intValue = intValue
@@ -22,13 +22,11 @@ struct JSON: Decodable {
     }
     
     init(from decoder: Decoder) throws {
-        
         if let container = try? decoder.container(keyedBy: CodingKeys.self) {
             var result = [String: Any]()
             for key in container.allKeys {
                 result[key.stringValue] = try container.decode(JSON.self, forKey: key).value
             }
-            
             value = result
         } else if let container = try? decoder.singleValueContainer() {
             if let stringValue = try? container.decode(String.self) {

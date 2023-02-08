@@ -1,20 +1,28 @@
-//
-//  PetDetailScreen.swift
-//  Pets
-//
-//  Created by Lucas Inocencio on 08/02/23.
-//
-
 import SwiftUI
 
 struct PetDetailScreen: View {
+    let petId: Int
+    @StateObject private var vm: PetDetailViewModel
+    
+    init(petId: Int) {
+        _vm = StateObject(wrappedValue: PetDetailViewModel(service: Webservice()))
+        self.petId = petId
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            ForEach(vm.components, id: \.id) { component in
+                component.render()
+            }
+            
+        }.task {
+            await vm.load(petId: petId)
+        }
     }
 }
 
 struct PetDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        PetDetailScreen()
+        PetDetailScreen(petId: 2)
     }
 }

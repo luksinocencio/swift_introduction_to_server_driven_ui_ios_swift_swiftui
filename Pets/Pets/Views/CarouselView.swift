@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct CarouselView: View {
-    
     let uiModel: CarouselUIModel
     
     var body: some View {
@@ -18,10 +17,7 @@ struct CarouselView: View {
                         }
                     }
                 }
-                
             }
-            
         }
     }
 }
-

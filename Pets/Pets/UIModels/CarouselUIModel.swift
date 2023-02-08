@@ -15,4 +15,3 @@ struct CarouselUIModel: Decodable {
     let items: [CarouselRowUIModel]
     let action: Action
 }
-

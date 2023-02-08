@@ -4,12 +4,12 @@ struct ContentView: View {
     @StateObject private var vm: PetListViewModel
     
     init() {
-        _vm = StateObject(wrappedValue: PetListViewModel(service: LocalService()))
+        _vm = StateObject(wrappedValue: PetListViewModel(service: Webservice()))
     }
     
     var body: some View {
         ScrollView {
-            ForEach(vm.components, id: \.uniqueId) { component in
+            ForEach(vm.components, id: \.id) { component in
                 component.render()
             }
             .navigationTitle("Pets")
