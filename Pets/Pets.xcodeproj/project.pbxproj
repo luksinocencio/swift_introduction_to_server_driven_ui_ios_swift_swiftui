@@ -38,6 +38,10 @@
 		E8EB91E82993F85500B11836 /* RatingRowUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB91E72993F85500B11836 /* RatingRowUIModel.swift */; };
 		E8EB91EA2993F8B800B11836 /* RatingRowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB91E92993F8B800B11836 /* RatingRowComponent.swift */; };
 		E8EB91EC2993FA6D00B11836 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB91EB2993FA6D00B11836 /* RatingView.swift */; };
+		E8EB91EE2994000000B11836 /* ListUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB91ED2994000000B11836 /* ListUIModel.swift */; };
+		E8EB91F02994015500B11836 /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB91EF2994015500B11836 /* ListComponent.swift */; };
+		E8EB91F2299401DC00B11836 /* RowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB91F1299401DC00B11836 /* RowComponent.swift */; };
+		E8EB91F42994082A00B11836 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB91F32994082A00B11836 /* EmptyComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +78,10 @@
 		E8EB91E72993F85500B11836 /* RatingRowUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRowUIModel.swift; sourceTree = "<group>"; };
 		E8EB91E92993F8B800B11836 /* RatingRowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRowComponent.swift; sourceTree = "<group>"; };
 		E8EB91EB2993FA6D00B11836 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		E8EB91ED2994000000B11836 /* ListUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUIModel.swift; sourceTree = "<group>"; };
+		E8EB91EF2994015500B11836 /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
+		E8EB91F1299401DC00B11836 /* RowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowComponent.swift; sourceTree = "<group>"; };
+		E8EB91F32994082A00B11836 /* EmptyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +201,7 @@
 				E84E6A162992D489002901E2 /* CarouselUIModel.swift */,
 				E84E6A2A2993639E002901E2 /* TextRowUIModel.swift */,
 				E8EB91E72993F85500B11836 /* RatingRowUIModel.swift */,
+				E8EB91ED2994000000B11836 /* ListUIModel.swift */,
 			);
 			path = UIModels;
 			sourceTree = "<group>";
@@ -205,6 +214,9 @@
 				E84E6A182992D4D7002901E2 /* CarouselComponent.swift */,
 				E84E6A2C299363BF002901E2 /* TextRowComponent.swift */,
 				E8EB91E92993F8B800B11836 /* RatingRowComponent.swift */,
+				E8EB91EF2994015500B11836 /* ListComponent.swift */,
+				E8EB91F1299401DC00B11836 /* RowComponent.swift */,
+				E8EB91F32994082A00B11836 /* EmptyComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -326,17 +338,21 @@
 				E8BCE8E7299168170035FF62 /* PetListViewModel.swift in Sources */,
 				E8BCE8D729915ED60035FF62 /* ScreenModel.swift in Sources */,
 				E8BCE8C229915BF60035FF62 /* PetsApp.swift in Sources */,
+				E8EB91F42994082A00B11836 /* EmptyComponent.swift in Sources */,
 				E84E6A222992E527002901E2 /* Route.swift in Sources */,
 				E84E6A29299360D8002901E2 /* PetDetailViewModel.swift in Sources */,
 				E84E6A242992E68F002901E2 /* Navigator.swift in Sources */,
+				E8EB91EE2994000000B11836 /* ListUIModel.swift in Sources */,
 				E8BCE8D129915C160035FF62 /* Webservice.swift in Sources */,
 				E8BCE8D429915C7A0035FF62 /* Constants.swift in Sources */,
+				E8EB91F02994015500B11836 /* ListComponent.swift in Sources */,
 				E84E6A192992D4D7002901E2 /* CarouselComponent.swift in Sources */,
 				E8EB91EA2993F8B800B11836 /* RatingRowComponent.swift in Sources */,
 				E84E6A172992D489002901E2 /* CarouselUIModel.swift in Sources */,
 				E8BCE8DE2991665A0035FF62 /* FeaturedImageUIModel.swift in Sources */,
 				E8BCE8E929916B270035FF62 /* Dictionary+Extensions.swift in Sources */,
 				E8EB91EC2993FA6D00B11836 /* RatingView.swift in Sources */,
+				E8EB91F2299401DC00B11836 /* RowComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

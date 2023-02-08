@@ -8,12 +8,14 @@ struct ContentView: View {
     }
     
     var body: some View {
-        ScrollView {
+        List {
             ForEach(vm.components, id: \.id) { component in
                 component.render()
             }
             .navigationTitle("Pets")
-        }.task {
+        }
+        .listStyle(.plain)
+        .task {
             await vm.load()
         }.embedInNavigationView()
     }
